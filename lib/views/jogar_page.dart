@@ -24,14 +24,14 @@ class _JogarPageState extends State<JogarPage> {
     });
 
     await Future.delayed(
-      Duration(milliseconds: 1500),
+      Duration(milliseconds: 1200),
       () => moeda = 'assets/images/${jogada[indexList]}.png',
     );
 
     setState(() {});
 
     await Future.delayed(
-      Duration(milliseconds: 5000),
+      Duration(milliseconds: 3000),
     );
     setState(() {
       visivel = true;
@@ -80,10 +80,19 @@ class _JogarPageState extends State<JogarPage> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 50.0, bottom: 50),
-                child: ElevatedButton(
-      style: ButtonStyle(padding: EdgeInsets.all(8)),
-                  onPressed: !visivel ? null : startGame,
-                  child: Text('Jogar', style: TextStyle(fontSize: 30),),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(10),
+        shadowColor: Colors.yellow,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20)
+        )
+        ),
+                    onPressed: !visivel ? null : startGame,
+                    child: Text('Jogar', style: TextStyle(fontSize: 30),),
+                  ),
                 ),
               )
             ],
