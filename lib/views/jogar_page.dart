@@ -83,15 +83,16 @@ class _JogarPageState extends State<JogarPage> {
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   child: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.all(10),
-        shadowColor: Colors.yellow,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20)
-        )
-        ),
+                    style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.all(10),
+                        shadowColor: Colors.yellow,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20))),
                     onPressed: !visivel ? null : startGame,
-                    child: Text('Jogar', style: TextStyle(fontSize: 30),),
+                    child: Text(
+                      'Jogar',
+                      style: TextStyle(fontSize: 30),
+                    ),
                   ),
                 ),
               )
