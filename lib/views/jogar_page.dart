@@ -80,7 +80,7 @@ class _JogarPageState extends State<JogarPage> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 50.0, bottom: 50),
-                child: Container(
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width * 0.5,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
